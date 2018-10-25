@@ -20,14 +20,18 @@ GRASP，全称为General Responsibility Assignment Software Pattern，即通用�
 
 
 下面通过一个示例来理解单一职责原则：  
-	sunnyg软件公司开发人员李某针对其CRM（Customer Relationship Management, 客户管理管理）系统中客户统计信息模块提出下图1所示初始设计方案：
-![srp01](https://github.com/wojiaofeiji/GRASP/blob/master/resource/image/srp01.jpeg)
+	sunnyg软件公司开发人员李某针对其CRM（Customer Relationship Management, 客户管理管理）系统中客户统计信息模块提出下图1所示初始设计方案：  
+	
+![srp01](https://github.com/wojiaofeiji/GRASP/blob/master/resource/image/srp01.jpeg)  
+
 在图一当中，CustomerDataChart类承担了太多的职责， 既包含与数据库相关的方法，又包含了图表的生成与图标的展示相关方法； 如果在其他类中需要连接数据库或者使用findCustomer方法查询客户信息，无法实现代码的重用；无论是修改图表显示方式还是修改数据库连接方式都需要对类进行修改，他不至于一个引起它变化的原因。违背了单一职责原则。因此，需要对该类进行拆分：
 	(1). DBUtil:负责连接数据库， 主要管理连接的处理getConnection();
 	(2). CustomerDao:负责对数据库中Customer的操作，如findCustomers();
 	(3). CustomerDataChart:负责图标的生成与显示，包含creatChart() displayChart()
-使用单一职责原则重构后的结构如图：
-![srp02](https://github.com/wojiaofeiji/GRASP/blob/master/resource/image/srp02.jpeg)
+使用单一职责原则重构后的结构如图：  
+
+![srp02](https://github.com/wojiaofeiji/GRASP/blob/master/resource/image/srp02.jpeg)  
+
 	
 
 ### 2. 开闭原则
