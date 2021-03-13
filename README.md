@@ -10,6 +10,7 @@ principle of software design
 ## GRASP
 GRASP，全称为General Responsibility Assignment Software Pattern，即通用职责分配软件模式，它由《UML和模式应用》(Applying UML and Patterns)一书作者Craig Larman提出。与其将它们称之为设计模式，不如称之为设计原则，因为它是站在面向对象设计的角度，告诉我们怎样设计问题空间中的类与分配它们的行为职责，以及明确类之间的相互关系等，而不像GoF模式一样是针对特定问题而提出的解决方案.
 
+
 ### 1. 单一职责原则
 &nbsp;&nbsp; 单一职责原则是最简单的面向对象设计原则， 他用于控制类的粒度大小， 单一原则的定义如下  
 	**单一职责原则（Single Responsibility principle, SRP）: 一个类只负责一个功能领域中的职责，或可以定义为，就一个类而言，应该只有一个引起它变化的原因。**  
